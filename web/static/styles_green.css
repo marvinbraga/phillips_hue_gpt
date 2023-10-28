@@ -1,0 +1,77 @@
+body {
+    background: #000;
+    font-family: 'Arial', sans-serif;
+}
+
+.chat-response {
+    background-color: #424242; /* Cor de fundo cinza escuro */
+    border-radius: 15px; 
+    padding: 20px;
+    margin: 20px 0;
+    color: #fff; /* Cor de texto branco */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2); /* Sombra ao redor da resposta do chat */
+}
+
+.chat-card {
+    max-width: 600px;
+    margin: auto;
+    background: #1f1f1f; /* Cor de fundo cinza escuro */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.7); /* Sombra ao redor do cartão de chat */
+}
+
+.user-message {
+    text-align: right;
+    color: #00ff00; /* Cor de texto verde */
+}
+
+.title {
+    color: #00ff00; /* Cor de texto verde */
+    text-shadow: 0px 0px 10px #00ff00; /* Sombra de texto verde */
+}
+
+#chat_box {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.btn {
+    border: none !important; /* Remove a borda do botão */
+    outline: none !important; /* Remove o contorno que aparece ao clicar no botão */
+}
+
+button {
+    background: linear-gradient(to right, #00ff00, #1f1f1f);
+    border: none; /* Remove a borda do botão */
+    color: #fff;
+    text-shadow: 0px 0px 10px #00ff00;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #1f1f1f, #00ff00);
+    color: #1f1f1f;
+}
+
+input[type="text"] {
+    background: #424242;
+    color: #fff;
+    border: none; /* Remove a borda da caixa de texto */
+    outline: none; /* Remove o contorno que aparece ao clicar na caixa de texto */
+}
+
+/* Personalizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 5px; /* Largura da barra de rolagem */
+}
+
+/* Personalizando a "alça" (o elemento que você arrasta) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Cor da "alça" */
+    border-radius: 2px; /* Bordas arredondadas */
+}
+
+/* Quando a "alça" é clicada (estado :hover) */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor da "alça" ao passar o mouse */
+}

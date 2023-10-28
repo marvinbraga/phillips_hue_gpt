@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "phillips-hue-gpt"
+version = "0.1.0"
+description = "Esta é uma PoC que integre o GPT-3.5-Turbo para a criação de iluminação interativa com os dispositivos Hue, da Phillips."
+authors = ["Marcus Vinicus Braga <mvbraga@gmail.com>"]
+readme = "readme.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.0.0"
+phue = "^1.1"
+python-dotenv = "^1.0.0"
+flask-cors = "^4.0.0"
+jupyter = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
