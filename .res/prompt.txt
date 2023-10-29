@@ -1,5 +1,5 @@
 Tenho a seguinte lista de lâmpadas e quero que você crie uma configuração de cores para elas que componham um tema de acordo com as seguintes instruções:
-{insctructions}.
+{instructions}.
 
 Aqui está a lista de minhas lâmpadas com seus respectivos posicionamentos:
 

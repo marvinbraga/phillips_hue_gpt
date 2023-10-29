@@ -8,11 +8,20 @@ const scrollToBottom = () => {
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const formData = new FormData(form);
+
+    // Exibe o modal de processamento
+    $('#processingModal').modal('show');
+
     fetch('/send_message', {
         method: 'POST',
         body: formData
     })
-        .then(response => response.text())
+        .then(response => {
+            // Esconde o modal de processamento
+            $('#processingModal').modal('hide');
+
+            return response.text();
+        })
         .then(data => {
             // Adicionando a mensagem do usuário
             const userMessageDiv = document.createElement('div');
