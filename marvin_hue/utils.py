@@ -12,15 +12,17 @@ class RGBtoXYAdapter:
     """
     @staticmethod
     def check_min_max(value):
-        result = value if value > 1 else 1
+        result = value if value > 0 else 0
         result = result if result < 256 else 255
         return result
 
     @staticmethod
-    def convert(red, green, blue):
+    def convert(red: int, green: int, blue: int) -> (float, float):
         red = RGBtoXYAdapter.check_min_max(red)
         green = RGBtoXYAdapter.check_min_max(green)
         blue = RGBtoXYAdapter.check_min_max(blue)
+        if red + green + blue == 0:
+            blue = 1
 
         red = ((red + 0.055) / (1.0 + 0.055)) ** 2.4 if red > 0.04045 else red / 12.92
         green = ((green + 0.055) / (1.0 + 0.055)) ** 2.4 if green > 0.04045 else green / 12.92

@@ -7,7 +7,7 @@ from langchain.prompts import ChatPromptTemplate
 
 from marvin_hue.basics import LightConfig
 from marvin_hue.controllers import HueController
-from marvin_hue.parsers import LightConfigJsonParser
+from services.parsers import LightConfigJsonParser
 from services.prompts import PromptInstructionsHue, PromptResponseHue
 
 load_dotenv(find_dotenv())
@@ -72,6 +72,6 @@ if __name__ == '__main__':
     inst = """
         Crie uma configuração de cores para um dia de sol de primavera repleto de flores coloridas.
         """
-    _llm = "gpt-3.5-turbo"
+    _llm = "gpt-4"
     _chat = HueChat().send_instructions(instruction=inst, llm=_llm).apply().get_response(_llm)
     print(_chat.response)

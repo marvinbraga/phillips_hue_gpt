@@ -21,7 +21,9 @@
             </div>
             <form method="POST" action="/send_message" class="mt-3">
                 <div class="mb-3">
-                    <input type="text" name="human_input" placeholder="Enter your instructions..." class="form-control">
+                    <label class="w-100 form-label" for="user_input">Enter your instructions:
+                        <textarea class="form-control" name="human_input"></textarea>
+                    </label>
                 </div>
                 <button type="submit" class="btn btn-primary">Send...</button>
             </form>

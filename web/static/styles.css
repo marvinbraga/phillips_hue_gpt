@@ -11,8 +11,12 @@ h1 {
 }
 
 @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .chat-card {
@@ -52,10 +56,12 @@ button:hover {
     color: #333;
 }
 
-input[type="text"] {
+textarea {
     color: #333;
     background: #fff;
     border: none;
     outline: none;
     transition: all 0.5s ease;
+    width: 100%; /* Adicionado para fazer o textarea ocupar toda a largura */
+    box-sizing: border-box; /* Adicionado para incluir padding e border na largura total */
 }
