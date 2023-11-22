@@ -42,6 +42,8 @@ class HueController:
 
         xy = RGBtoXYAdapter.convert(color.red, color.green, color.blue)
         light = self._get_light_by_name(light_name)
+        if not light:
+            raise Exception(f'O nome "{light_name}" não foi encontrado na lista de dispositivos.')
         light.xy = xy
         light.brightness = color.brightness
         return light

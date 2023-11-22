@@ -72,6 +72,6 @@ if __name__ == '__main__':
     inst = """
         Crie uma configuração de cores para um dia de sol de primavera repleto de flores coloridas.
         """
-    _llm = "gpt-4"
+    _llm = "gpt-3.5-turbo"
     _chat = HueChat().send_instructions(instruction=inst, llm=_llm).apply().get_response(_llm)
     print(_chat.response)
